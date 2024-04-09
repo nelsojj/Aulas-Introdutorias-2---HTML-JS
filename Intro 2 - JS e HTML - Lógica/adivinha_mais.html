@@ -1,0 +1,63 @@
+---AULA 08 COMEÇA AQUI---<br><br>
+
+<meta charset="UTF-8">
+
+<input/> 								
+<button>COMPARE COM MEU SEGREDO</button>
+
+<script>
+	var input = document.querySelector("input");
+	input.focus();
+
+	function sorteia(){
+		return Math.round(Math.random() * 10);
+	}
+
+	function sorteiaNumeros(quantidade){				//sortear varios numeros aleatorios e confirmar se não são iguais
+		var segredos = [];
+		var numero = 1;
+
+		while (numero <= quantidade){
+
+			var numeroAleatorio = sorteia();
+			var achou = false;
+
+			for (var j = 0; j < segredos.length; j++){
+				if(segredos[j] == numeroAleatorio){
+					achou = true;
+					break;
+				}
+			}
+			if(achou == false){
+				segredos.push(numeroAleatorio);
+				numero++;
+			}
+		}
+		return segredos;
+	}
+
+	var segredos = sorteiaNumeros(4);
+	console.log(segredos);
+	var chute = false;
+
+	function verificar () {
+		for (var i = 0; i < segredos.length; i++){
+
+			if (input.value == segredos[i]){
+				alert("VOCÊ ACERTOU!!!");
+				chute = true;
+				break;
+			}	
+		}
+		if(chute == false){
+			alert("VOCÊ ERROU :(");
+		}
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verificar;                        // Sem os ()s para ele não puxar a função na hora
+</script>
+	
+O FOR da aula 09 - FUNCIONOU

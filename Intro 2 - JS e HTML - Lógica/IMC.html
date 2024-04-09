@@ -1,0 +1,50 @@
+---AULA 05 COMEÇA AQUI---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br><br>");
+	}
+
+	function calculaImc(peso, altura){
+		var imc = peso / (altura*altura);
+		//mostra("O IMC calculado é: " + imc); ---> não coloque a saida na função. A pessoa usando os valores decide oq fazer depois
+		return imc; // ou return peso / (altura*altura); Ja resolve a função
+	}
+	
+	var imcNelson = calculaImc(60, 1.73);
+	mostra ("O taldo imc é: " + imcNelson);
+	var imcFlanders = calculaImc(85, 1.80);
+	var somaImc = imcNelson + imcFlanders;
+	mostra("A soma dos IMC's é: " + somaImc);
+</script>
+
+---VAMOS DEIXAR MAIS USAVEL---<br><br>
+
+<script>
+	var nome = prompt("Insira seu nome:")
+	var peso = prompt("Insira seu peso:");
+	var altura = prompt("Insira sua altura:");
+	var imc = calculaImc(peso, altura);
+	mostra(nome + " seu IMC é: " + imc);
+</script>
+
+---AULA 06 VOLTA AQUI-----<br><br>
+
+<script>
+	if(imc < 18.5){
+		mostra("Seu IMC está abaixo do recomendado")
+	}
+	if(imc > 35){
+		mostra("Seu IMC está acima do recomendado")
+	}
+	if(imc >= 18.5 && imc <=35){
+			mostra("Seu IMC está ótimo")
+	}
+</script>

@@ -1,0 +1,56 @@
+---AULA 06 Ultimo Video---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br><br>");
+	}
+
+	function sorteia(n){
+		return Math.round(Math.random() * n); //só faz a ação mesmo sem variavel ainda
+	}
+
+	var numeroPensado = sorteia(10);
+
+	var chute = parseInt(prompt("Qual número você acha que é?"));
+
+	if(chute == numeroPensado){
+		mostra("Você acertou! O número era " +numeroPensado);
+	}
+	else{
+		mostra("Você errou :(");
+	}
+</script>
+	
+
+---AULA 07 Volta aqui---<br><br>
+
+<script>
+	var numeroSecreto = sorteia(10)
+	var i = 0;
+
+	while(i < 3){
+
+		var chute2 = parseInt(prompt("Qual número você acha que é?"));
+		if(chute2 == numeroSecreto){
+		mostra("Você acertou! O número era " + numeroSecreto);
+		i++;
+		break;
+		}
+		else{
+		mostra("Você errou :(");
+		i++;
+		}
+	}
+
+	mostra("Voce usou " + i + " tentativas!")
+	mostra("FIM")
+	
+</script>
+

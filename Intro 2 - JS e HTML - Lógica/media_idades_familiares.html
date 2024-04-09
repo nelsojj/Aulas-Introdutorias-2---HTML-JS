@@ -1,0 +1,32 @@
+---AULA 07 PT3 FOR ou WHILE---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br><br>");
+	}
+
+	var totalFamiliares = parseInt(prompt("Quantidade de pessoas na familia"));
+	var totalIdades = 0;
+
+	for(var i = 0; i < totalFamiliares; i++){
+		var idade = parseInt(prompt("Informe a idade do familiar"));
+		totalIdades = totalIdades + idade;
+	}
+
+	var mediaIdades = totalIdades/totalFamiliares;
+
+	mostra("O total de idades é: " + totalIdades);
+	mostra("A media das idades é: " + mediaIdades);
+
+	mostra("FIM");
+</script>
+	
+
+

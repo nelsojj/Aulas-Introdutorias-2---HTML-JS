@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+<script>
+	document.write("A minha situação financeira é: <br>TRISTE<br><br>");
+	document.write("A minha idade é: ");
+	document.write(27 + " anos");
+	document.write("<br> Eu nasci em " + (2024-28) +"<br>");
+	document.write("Que ódio de ver tudo isso desde o começo pq eu tenho toc");
+	document.write("<br> <h1>Mas é bom já que eu sou bem burro</h1>");
+</script>
+<br><br>
+
+>lembrando: A tag SCRIPT faz o código ser lido em JS -estamonos no mundo do JS e não em HTML <br>
+		   documente.write - Digita HTML dentro do JS - As regreas do HTML se aplicam - Para fazer matematica precisa estar dentro de parenteses <br>
+		   Eu posso abrir quantos scripts eu quiser <br>
+		   Testando umas variaiveis <br>
+		   <br><br>
+<script>
+	var ano = 2024;
+
+	document.write("João tem " + (ano - 1977) + " anos <br>");
+	document.write("Tomas tem " + (ano - 1979) + " anos <br>");
+	document.write("Michel tem " + (ano - 1982) + " anos <br><br>");
+	ano = 2020
+	document.write("Mateus tem " + (ano - 1985) + " anos <br>");
+	document.write("Bruno tem " + (ano - 1999) + " anos <br>");
+	document.write("Gabriel tem " + (ano - 1988) + " anos <br><br>");
+
+	var idadeMarcos = 30;
+	var idadeAna = 33;
+	var idadePaulo = 25;
+
+	var media = (idadePaulo + idadeAna + idadeMarcos)/3;
+	document.write("A média das idades é:" + Math.round(media) +"<br><br>");
+</script>
+
+	--- AULA 4 COMEÇA AQUI --- <br><br>
+
+>Criando a variavel para pular linha:
+
+<script>
+	var puloLinha = "<br><br><br>"
+	document.write(puloLinha);
+	document.write("TESTANDO PULAR 3 LINHAS POR VEZ")
+	document.write(puloLinha);
+	document.write("PULOU e vamos transformar em function para ficar mais facil de usar");
+	document.write(puloLinha);
+</script>
+
+>Fazendo para function (pular linha, document.write): <br><br>
+<script>
+	function mostra(frase){  // frase é o parâmetro adicionado e lido
+		document.write('<big>'+ frase+ '</big>');
+		pularLinha();
+	}
+	function pularLinha(){
+		document.write("<br><hr><br>");
+	}
+
+	// document.write("Mateus tem " + (ano - 1985) + " anos");
+	mostra("Mateus tem " + (ano - 1985) + " anos");
+	//pularLinha();
+	// document.write("Bruno tem " + (ano - 1999) + " anos");
+	mostra("Bruno tem " + (ano - 1999) + " anos");
+	// document.write("Gabriel tem " + (ano - 1988) + " anos");
+	mostra("Gabriel tem " + (ano - 1988) + " anos");
+	
+</script>
+
+Fim dessas Aulas.

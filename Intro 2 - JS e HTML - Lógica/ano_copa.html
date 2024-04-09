@@ -1,0 +1,27 @@
+---AULA 07 COMEÇA AQUI---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br><br>");
+	}
+
+	var anoCopa = 1930;
+	var limite = parseInt(prompt("Entre com a data limite"))
+
+	while (anoCopa <= limite){
+		alert("Teve copa em: " + anoCopa);
+		mostra(anoCopa);
+		anoCopa = anoCopa + 4;
+	}
+	
+</script>
+	
+
+

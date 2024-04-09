@@ -1,0 +1,26 @@
+---AULA 07 PT2 FOR---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br><br>");
+	}
+
+	var multiplicador = parseInt(prompt("Entre com o numero que deseja a tabuada"));
+
+	for(var n = 1; n <= 10; n++){
+		var resultado = n * multiplicador; 
+		mostra( multiplicador + " * " + n + " = " + resultado);
+	}
+
+	mostra("FIM DA TABUADA");
+</script>
+	
+
+

@@ -1,0 +1,25 @@
+---AULA 07 Ultimo Video---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br>");
+	}
+
+	for(var linha = 1; linha <= 3; linha++){
+		//mostra("* * * * * * * * *");
+		for(var coluna = 1; coluna <= 10; coluna++){
+			document.write("*");
+		}
+		pularLinha();
+}
+
+</script>
+	
+

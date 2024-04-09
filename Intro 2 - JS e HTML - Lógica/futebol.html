@@ -1,0 +1,32 @@
+---AULA 06 COMEÇA AQUI---<br><br>
+
+<meta charset="UTF-8">
+
+<script>
+	function mostra(frase){  
+		document.write(frase);
+		pularLinha();
+	}
+
+	function pularLinha(){
+		document.write("<br><br>");
+	}
+
+	var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+	var empates = parseInt(prompt("Entre com o número de empates"));
+
+	var pontos = (vitorias * 3) + empates;
+
+	mostra("Seu time fez um total de " + pontos + " pontos");
+	
+	if (pontos > 28){
+		mostra("Seu time esta MELHOR do que ano passado");
+	}if(pontos < 28) {
+		mostra("Seu time esta PIOR do que ano passado");
+	}if(pontos == 28){
+		mostra("Seu time esta IGUAL do que ano passado");
+	}
+	
+	
+	
+</script>
